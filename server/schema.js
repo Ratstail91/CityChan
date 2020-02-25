@@ -28,7 +28,7 @@ type Query {
 }
 
 type Mutation {
-	createThread(country: String, state: String, city: String, author: String, text: String!): Thread
+	createThread(country: String!, state: String!, city: String!, author: String, text: String!): Thread
 	replyThread(id: ID!, author: String, text: String!): Thread
 }
 `;

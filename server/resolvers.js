@@ -24,6 +24,10 @@ module.exports = {
 
 	Mutation: {
 		createThread: (parent, { country, state, city, author, text }, { db }, info) => {
+			if (!country || !state || !city || !text) {
+				return null;
+			}
+
 			return db.Thread.create({
 				country: country,
 				state: state,
@@ -39,7 +43,11 @@ module.exports = {
 			});
 		},
 
-		replyThread: (parent, { id, author, text}, { db }, info) => {
+		replyThread: (parent, { id, author, text }, { db }, info) => {
+			if (!id || !text) {
+				return null;
+			}
+
 			db.Post.create({
 				author: author,
 				text: text,
