@@ -1,0 +1,8 @@
+DB_HOST=localhost
+DB_USER=citychan
+DB_PASS=citychan
+DB_NAME=citychan
+DB_PORT=3306
+
+WEB_ADDRESS=localhost
+WEB_PORT=3100
